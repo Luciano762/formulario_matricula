@@ -25,7 +25,7 @@ label + .radio-wrapper {
     inset: 0;
   }
 
-  .radio-image {
+  .radio-img {
     background-image: url(/assets/icons/radio-default.svg);
 
     width: 1.5rem;
@@ -38,5 +38,17 @@ label + .radio-wrapper {
 
   &:hover, &:focus-within {
     border: 1px solid var(--stroke-highlight);
+
+    & .radio-img {
+      background-image: url(/assets/icons/radio-hover.svg);
+    }
+  }
+
+  &:has(:checked) {
+    border: 2px solid var(--stroke-highlight);
+
+    & .radio-img {
+      background-image: url(/assets/icons/radio-checked.svg);
+    }
   }
 }
